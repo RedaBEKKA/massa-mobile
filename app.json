@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "massatrails",
+    "slug": "massatrails",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/icon-white.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#88C1A3"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon-white.png",
+        "backgroundColor": "#88C1A3"
+      }
+    },
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#88C1A3"
+    },
+    "androidNavigationBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#88C1A3"
+    },
+    "web": {
+      "favicon": "./assets/logo.png"
+    }
+  }
+}
