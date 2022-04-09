@@ -17,4 +17,5 @@ export const colors = {
     black: "#302B2A",
     beige: "#FBF6F3",
     beigeWithOpacity: "#FBF6F315",
+
 };

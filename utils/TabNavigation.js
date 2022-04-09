@@ -1,5 +1,5 @@
 import Home from "../screens/Home";
-import Espace from "../screens/Espace";
+import Espace from "../screens/Space";
 import Trails from "../screens/Trails";
 import Workshop from "../screens/Workshop";
 import Communaute from "../screens/Communaute";
