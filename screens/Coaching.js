@@ -7,7 +7,10 @@ import Footer from "../components/Footer";
 import DimensionsHook from "../hooks/DimensionsHook";
 import Question from "../assets/question.png"
 import Rendez from "../assets/rendez.png"
+import Mascotte from "../assets/mascotte_1.png";
 import { PrimaryButton } from "../components/Buttons";
+
+
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
@@ -27,37 +30,70 @@ const Coaching = ({ navigation }) => {
             <View style={isDesktop && styles.desktopContent}>
               <View style={styles.card}>
                 <View style={styles.semiCircle}>
-                  <Image source={Rendez} style={styles.image} />
+
                 </View>
-                <H7 style={{ position: 'absolute', top: 145, paddingVertical: 6, paddingHorizontal: 10, }}>Rendez-vous avec un expert</H7>
-                <LightTxt style={{ position: 'absolute', top: 185, paddingVertical: 6, paddingHorizontal: 10, }}>Vous avez suivi un ou plusieurs Trails, et vous souhaitez échanger avec un de nos experts pour poursuivre votre chemin. Vous aimeriez avoir des précisions sur un de vos trails pour vous orienter.
-                  Vous souhaitez aller plus loin en rencontrant un de nos experts « Trails » ou « Atelier ».</LightTxt>
-                  <PrimaryButton
-                  style={{ position:'absolute',bottom:10,left:10,width: 249}}
-                  onPress={() => {}}
+                <Image source={Rendez} style={styles.image} />
+                <H7 style={{ position: 'absolute', top: 165, paddingHorizontal: 25, }}>Rendez-vous avec un expert</H7>
+                <View style={{ position: 'absolute', top: 205, textAlign: 'justify' }}>
+                  <LightTxt style={{ paddingHorizontal: 25 }}>Vous avez suivi un ou plusieurs Trails, et vous souhaitez échanger avec un de nos experts pour poursuivre votre chemin. Vous aimeriez avoir des précisions sur un de vos trails pour vous orienter.
+                    Vous souhaitez aller plus loin en rencontrant un de nos experts « Trails » ou « Atelier ».</LightTxt>
+                </View>
+                {(isDesktop || isTablet) && (<PrimaryButton
+                  style={{ position: 'absolute', bottom: 10, left: 10, width: 249,height:42 }}
+                  onPress={() => { }}
                 >
-                  <SmallLightTxt>Prenez rdv avec un de nos experts</SmallLightTxt>
-                </PrimaryButton>
+                  <SmallLightTxt>Répondez à nos questions</SmallLightTxt>
+                </PrimaryButton>)}
+                {
+                  isMobile && (
+                    <PrimaryButton
+                      style={{ position: 'absolute', bottom: 10, left: 50, width: 249,height:42 }}
+                      onPress={() => { }}
+                    >
+                      <SmallLightTxt>Répondez à nos questions</SmallLightTxt>
+                    </PrimaryButton>
+                  )
+                }
               </View>
               <View style={styles.card}>
                 <View style={styles.semiCircle}>
-                  <Image source={Question} style={styles.image} />
+
                 </View>
-                <H7 style={{ position: 'absolute', top: 145, paddingVertical: 6, paddingHorizontal: 10, }}>Questionnaire</H7>
-                <LightTxt style={{ position: 'absolute', top: 185, paddingVertical: 6, paddingHorizontal: 10, }}>Ces questionnaires nous permettent dans un premier temps de vous recommander des contenus en lien avec votre situation. Ils nous permettent aussi de vous orienter vers un service extérieur si nous détectons une situation à risque. A terme, ils nous permettront
-                  de construire des trails uniques et personnalisés, pour vous uniquement.</LightTxt>
-                <PrimaryButton
-                   style={{ position:'absolute',bottom:10,left:10,width: 249}}
-                  onPress={() => {}}
+                <Image source={Question} style={styles.image} />
+                <H7 style={{ position: 'absolute', top: 165, paddingHorizontal: 25, }}>Questionnaire</H7>
+                <View style={{ position: 'absolute', top: 205, textAlign: 'justify' }}>
+                  <LightTxt style={{ paddingHorizontal: 25 }}>Ces questionnaires nous permettent dans un premier temps de vous recommander des contenus en lien avec votre situation. Ils nous permettent aussi de vous orienter vers un service extérieur si nous détectons une situation à risque. A terme, ils nous permettront
+                    de construire des trails uniques et personnalisés, pour vous uniquement.</LightTxt>
+                </View>
+                {(isDesktop || isTablet) && (<PrimaryButton
+                  style={{ position: 'absolute', bottom: 10, left: 10, width: 249,height:42 }}
+                  onPress={() => { }}
                 >
                   <SmallLightTxt>Répondez à nos questions</SmallLightTxt>
-                </PrimaryButton>
+                </PrimaryButton>)}
+                {
+                  isMobile && (
+                    <PrimaryButton
+                      style={{ position: 'absolute', bottom: 10, left: 50, width: 249,height:42 }}
+                      onPress={() => { }}
+                    >
+                      <SmallLightTxt>Répondez à nos questions</SmallLightTxt>
+                    </PrimaryButton>
+                  )
+                }
               </View>
             </View>
-
-
           </View>
+          {
+            isDesktop &&
+            (
+              <View>
+                <Image source={Mascotte} style={styles.mascotteImg} />
+              </View>
+            )
+          }
         </ScrollView>
+
 
       </View>
     </View>
@@ -88,8 +124,8 @@ const styles = StyleSheet.create({
   },
   card: {
     borderRadius: 20,
-    width: 343,
-    height: windowWidth > 500 ? 490 : 421,
+    width: windowWidth > 800 ? 453 : 343,
+    height: 490,
     backgroundColor: colors.white,
     marginTop: 15,
     marginRight: windowWidth > 500 ? 15 : 0,
@@ -101,20 +137,32 @@ const styles = StyleSheet.create({
   semiCircle: {
     position: 'absolute',
     height: 527,
-    width: 387,
-    left: -21,
+    width: windowWidth > 800 ? 527 : 380,
+    left: windowWidth >= 800 ? -41 : -21,
     top: -393,
     borderRadius: 360,
-    backgroundColor: colors.green1,
+    zIndex: 1,
+    backgroundColor: colors.green2,
+    opacity: 0.25
   },
   image: {
     width: 50,
-    height: 55,
-    position: 'relative',
+    height: windowHeight <= 500 ? 40 : 60,
+    position: 'absolute',
     bottom: -455,
-    left: 165,
-    zIndex: 2,
+    top: 60,
+    left: windowWidth > 800 ? 210 : 144,
+    zIndex: 200,
+    tintColor: colors.green2,
 
 
+  },
+
+  mascotteImg: {
+    position: 'absolute',
+    height: 334,
+    width: 252,
+    left: "82%",
+    top: -260
   }
 });

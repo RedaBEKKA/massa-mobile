@@ -24,7 +24,7 @@ const UseCard = ({ navigation,img,title }) => {
 
       <TouchableOpacity
         style={isDesktop ? styles.DestTxt : styles.txt}
-        onPress={ToNav}
+        onPress={()=>{}}
       >
         <SmallBoldTxt>Go !</SmallBoldTxt>
       </TouchableOpacity>

@@ -14,7 +14,6 @@ import {
   CommunauteIcon,
   FocusedCommunauteIcon,
 } from "../assets/svg/TabBarIcons";
-import Footer from "./Footer";
 
 const TabBarComponent = ({ state, descriptors, navigation }) => {
   const { isDesktop } = DimensionsHook();
@@ -59,7 +58,7 @@ const TabBarComponent = ({ state, descriptors, navigation }) => {
 
   // footer for big screens
   if (isDesktop) {
-    return <Footer />;
+    return <></>;
   }
   return (
     <View>
