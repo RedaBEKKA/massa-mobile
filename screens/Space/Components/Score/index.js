@@ -19,7 +19,7 @@ const Score = () => {
   const MarginTop = !isDesktop ? 15 : 0;
 
   return (
-    <View style={styles.score}>
+    <View style={isDesktop ? styles.score : styles.scoreMob}>
       <H6 style={{ color: colors.beige, paddingTop: 35, alignSelf: "center" }}>
         Score
       </H6>

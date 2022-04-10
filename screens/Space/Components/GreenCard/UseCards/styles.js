@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: colors.green1,
     marginVertical: 5,
+    overflow:'hidden' 
   },
   BoxImage: {
     backgroundColor: "#FBF6F360",
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     height: "100%",
     width: "30%",
-    marginRight: 15,
+    marginRight: 5,
   },
   DesktopBoxImage: {
     backgroundColor: "#FBF6F360",
@@ -43,6 +44,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     overflow: "hidden",
     alignItems: "center",
+    overflow:'hidden' ,
+    alignSelf:'center'
   },
   LeftBox: {
     flexDirection: "row",

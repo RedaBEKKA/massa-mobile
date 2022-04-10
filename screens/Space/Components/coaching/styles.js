@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.yellow,
     marginVertical: 5,
     alignItems: "center",
+    overflow:'hidden' 
   },
   BoxImage: {
     backgroundColor: "#FBF6F360",
@@ -46,6 +47,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     overflow: "hidden",
     alignItems: "center",
+    alignSelf:'center'
+
   },
   LeftBox: {
     flexDirection: "row",

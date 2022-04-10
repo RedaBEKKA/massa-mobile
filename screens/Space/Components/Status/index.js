@@ -17,12 +17,7 @@ const Status = () => {
   const MarginTop = !isDesktop ? 15 : 0;
 
   return (
-    <View
-      style={[
-        styles.status,
-        { marginRight: Margin, marginVertical: MarginTop },
-      ]}
-    >
+    <View style={isDesktop ? styles.status : styles.statusMob }>
       <H6 style={{ color: colors.beige }}>Mon Status</H6>
 
       <View style={styles.statusItem}>

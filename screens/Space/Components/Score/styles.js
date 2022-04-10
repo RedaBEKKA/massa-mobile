@@ -8,10 +8,18 @@ const styles = StyleSheet.create({
   score: {
     position: "relative",
     height: 236,
-    width: 343,
-    marginBottom: 10,
+    width: 388,
     borderRadius: 20,
     backgroundColor: colors.blue1,
+  },
+  scoreMob: {
+    position: "relative",
+    height: 236,
+    width: 343,
+    borderRadius: 20,
+    backgroundColor: colors.blue1,
+    alignSelf:'center',
+    marginBottom:10
   },
   Line:{
     backgroundColor:colors.beige,

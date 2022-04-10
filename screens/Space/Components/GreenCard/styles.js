@@ -8,14 +8,13 @@ const styles = StyleSheet.create({
     greenCard: {
         position: "relative",
         height: windowWidth > 500 ? 112 : 78,
-        width: windowWidth > 500 ? 258 : 343,
+        width: windowWidth > 500 ? 258 : 287,
         borderRadius: 20,
         backgroundColor: colors.green1,
-        marginBottom: 10,
       },
       secondCard: {
         flexDirection: "column",
-        marginHorizontal: 15,
+        marginHorizontal: 5,
       },
 });
 export default styles;

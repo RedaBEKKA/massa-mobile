@@ -1,54 +1,63 @@
-import {
-  StyleSheet,
-  View,
-  Image,
-  ScrollView,
-  TouchableOpacity,
-  Dimensions,
-} from "react-native";
-import React, { useState } from "react";
+import { View, ScrollView } from "react-native";
+import React from "react";
 import HeaderComponent from "../../components/HeaderComponent";
-import {
-  H2,
-  H5,
-  H6,
-  H7,
-  SmallBoldTxt,
-  SmallLightTxt,
-  Txt,
-} from "../../components/TextsComponents";
-import { PrimaryButton } from "../../components/Buttons";
+import { H5 } from "../../components/TextsComponents";
 import DimensionsHook from "../../hooks/DimensionsHook";
 import styles from "./Hooks/Styles";
-import bacImg from "../../assets/Espace/Rectangle429.png";
 import Coaching from "./Components/coaching";
 import Status from "./Components/Status";
 import Score from "./Components/Score";
 import GrenCards from "./Components/GreenCard";
+import Trails from "./Components/Trails";
+import UseTrails from "./Components/Trails/UseEspace-Section-2";
 
 const Espace = ({ navigation }) => {
   const { isDesktop, isMobile, isTablet } = DimensionsHook();
 
   const PaddingVertical = !isDesktop ? 15 : 10;
   const Left = isDesktop ? 90 : 10;
+  const custumDisplay = isDesktop ? "row" : "column";
+
+  const Box = ({ children }) => {
+    return (
+      <View style={isDesktop ? styles.Box : styles.BoxMobil}>{children}</View>
+    );
+  };
 
   return (
     <View style={styles.container}>
       <HeaderComponent navigation={navigation} />
       <ScrollView>
-        <>
-          <H5 style={{ paddingLeft: Left, paddingVertical: PaddingVertical }}>
-            Mon Espace
-          </H5>
-          <View
-            style={isDesktop ? styles.desktopContent : styles.MobileContent}
-          >
+        <H5 style={{ paddingLeft: Left, paddingVertical: PaddingVertical }}>
+          Mon Espace
+        </H5>
+        <View style={[styles.Body, { flexDirection: custumDisplay }]}>
+          <Box>
             <Status />
             <Score />
+          </Box>
+
+          <Box>
             <GrenCards />
             <Coaching navigation={navigation} />
-          </View>
-        </>
+          </Box>
+        </View>
+        <View style={[styles.Body, { flexDirection: custumDisplay }]}>
+          <Box>
+            <UseTrails
+              Title="Trails en cours"
+              TextBtn="Sélectioner un trail"
+              TextBody="Aucun trail en cours"
+            />
+          </Box>
+          <Box>
+            <UseTrails
+              Title="Favoris"
+              TextBtn="Consulter notre catalogue"
+              TextBody="Vous n'avez pas encore ajouté de favoris"
+            />
+          </Box>
+        </View>
       </ScrollView>
     </View>
   );
