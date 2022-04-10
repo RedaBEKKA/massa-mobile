@@ -1,5 +1,5 @@
 import { View, ScrollView } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import HeaderComponent from "../../components/HeaderComponent";
 import { H5 } from "../../components/TextsComponents";
 import DimensionsHook from "../../hooks/DimensionsHook";
@@ -9,9 +9,14 @@ import Status from "./Components/Status";
 import Score from "./Components/Score";
 import GrenCards from "./Components/GreenCard";
 import UseTrails from "./Components/Trails/UseEspace-Section-2";
+import { ENDPOINT_TRAILS,TOKEN } from "@env";
+import axios from "axios";
 
 const Espace = ({ navigation }) => {
   const { isDesktop, isMobile, isTablet } = DimensionsHook();
+
+  const [data, setData] = useState([]);
+  const [loader, setLoader] = useState(false);
 
   const PaddingVertical = !isDesktop ? 15 : 10;
   const Left = isDesktop ? 110 : 10;
@@ -22,7 +27,16 @@ const Espace = ({ navigation }) => {
       <View style={isDesktop ? styles.Box : styles.BoxMobil}>{children}</View>
     );
   };
-
+  const getData = async () => {
+    setLoader(true);
+    const Response = await axios.post(ENDPOINT_TRAILS, { access_token: TOKEN });
+    console.log('Response', Response)
+    setData(Response.data);
+    setLoader(false);
+    setTimeout(() => {
+      setLoader(false);
+    }, 2000);
+  };
   return (
     <View style={styles.container}>
       <HeaderComponent navigation={navigation} />
@@ -45,8 +59,12 @@ const Espace = ({ navigation }) => {
           <Box>
             <UseTrails
               Title="Trails en cours"
+              Title2="Trails et ateliers en cours"
               TextBtn="Sélectioner un trail"
               TextBody="Aucun trail en cours"
+              getData={getData}
+              data={data}
+              swiper={true}
             />
           </Box>
           <Box>
@@ -54,6 +72,10 @@ const Espace = ({ navigation }) => {
               Title="Favoris"
               TextBtn="Consulter notre catalogue"
               TextBody="Vous n'avez pas encore ajouté de favoris"
+              Title2="Favoris"
+              swiper={false}
+
+
             />
           </Box>
         </View>

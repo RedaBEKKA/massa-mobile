@@ -5,7 +5,7 @@ import axios from "axios";
 import LoaderItem from "./LoaderItem";
 import { TOKEN } from "@env";
 
-const Swiper = ({ type, endpoint, navigation }) => {
+const Swiper = ({ type, endpoint, navigation, Columns, horizontal }) => {
   const [Data, setData] = useState([]);
   const [loader, setLoader] = useState(true);
 
@@ -31,7 +31,8 @@ const Swiper = ({ type, endpoint, navigation }) => {
     return (
       <FlatList
         showsHorizontalScrollIndicator={Platform.OS === "web"}
-        horizontal
+        horizontal={horizontal}
+        numColumns={Columns}
         style={{ marginTop: 15 }}
         data={[0, 1, 2]}
         keyExtractor={(item) => item}
@@ -44,8 +45,9 @@ const Swiper = ({ type, endpoint, navigation }) => {
   return (
     <FlatList
       showsHorizontalScrollIndicator={Platform.OS === "web"}
-      horizontal
-      style={{ marginTop: 15 }}
+      horizontal={horizontal}
+      numColumns={Columns}
+      style={{ height: "100%", width: "100%" }}
       data={Data}
       keyExtractor={(item) => item.ressourceTitle}
       renderItem={(props) => (

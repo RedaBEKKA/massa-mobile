@@ -44,6 +44,9 @@ const Home = ({ navigation }) => {
             navigation={navigation}
             type="Trail"
             endpoint={ENDPOINT_TRAILS}
+            Columns={1}
+            horizontal={true}
+
           />
         </View>
         {/**  Trails Swiper */}
@@ -59,6 +62,9 @@ const Home = ({ navigation }) => {
             navigation={navigation}
             type="Trail"
             endpoint={ENDPOINT_TRAILS}
+            Columns={1}
+            horizontal={true}
+
           />
         </View>
         {/**  Workshops */}
@@ -74,6 +80,10 @@ const Home = ({ navigation }) => {
             navigation={navigation}
             type="Atelier"
             endpoint={ENDPOINT_WORKSHOPS}
+            Columns={1}
+            horizontal={true}
+
+
           />
         </View>
         {isDesktop && <Footer />}
