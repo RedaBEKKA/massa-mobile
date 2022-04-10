@@ -8,14 +8,13 @@ import Coaching from "./Components/coaching";
 import Status from "./Components/Status";
 import Score from "./Components/Score";
 import GrenCards from "./Components/GreenCard";
-import Trails from "./Components/Trails";
 import UseTrails from "./Components/Trails/UseEspace-Section-2";
 
 const Espace = ({ navigation }) => {
   const { isDesktop, isMobile, isTablet } = DimensionsHook();
 
   const PaddingVertical = !isDesktop ? 15 : 10;
-  const Left = isDesktop ? 90 : 10;
+  const Left = isDesktop ? 110 : 10;
   const custumDisplay = isDesktop ? "row" : "column";
 
   const Box = ({ children }) => {

@@ -23,11 +23,33 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
     alignSelf:'center',
     width:343,
-    height:284,
+    height:170,
     alignSelf:'center',
-    marginTop:10
+    marginVertical:10
     
   },
+  ButtonDesktopMob:{
+    backgroundColor: colors.green2,
+    width:247,
+    height:47,
+    borderRadius:35,
+    alignItems:'center',
+    justifyContent:'center',
+    position:'absolute',
+    bottom:10
+
+  },
+  ButtonDesktop:{
+    backgroundColor: colors.green2,
+    width:247,
+    height:47,
+    borderRadius:35,
+    alignItems:'center',
+    justifyContent:'center',
+    position:'absolute',
+    bottom:'35%'
+
+  }
 
 });
 export default styles;

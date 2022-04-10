@@ -12,8 +12,8 @@ const UseTrails = ({Title,TextBody,TextBtn}) => {
   return (
     <View style={isDesktop ? styles.trails : styles.trailsMob} >
       <H6 style={{position:'absolute', top:10,left: 15}} >{Title}</H6>
-      <H7 >{TextBody}</H7>
-      <TouchableOpacity>
+      <H7 style={{position:'absolute', top:'20%',alignItems:'center',marginTop:20, textAlign:'center'}} >{TextBody}</H7>
+      <TouchableOpacity style={isDesktop ? styles.ButtonDesktop :styles.ButtonDesktopMob}>
           <Text>{TextBtn}</Text>
       </TouchableOpacity>
     </View>
