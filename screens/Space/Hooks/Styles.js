@@ -12,8 +12,7 @@ const styles = StyleSheet.create({
   },
   Body: {
     // backgroundColor:'#ccc',
-    justifyContent: "space-evenly",
-
+    alignSelf:'center'
   },
   desktopContent: {
     flex: 1,
@@ -21,35 +20,28 @@ const styles = StyleSheet.create({
     padding: 10,
     justifyContent: "space-evenly",
     // backgroundColor: "#ccc",
-    height:300
-
+    height: 300,
   },
   MobileContent: {
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
   },
-  TrailsContent: {
-    backgroundColor: "#ccc",
-    height: 300,
-    marginTop:10,
-    justifyContent: "space-evenly",
-    alignItems: "center",
-    flexDirection:'row'
-  },
+
   Box: {
     position: "relative",
     height: 284,
     width: 799,
     borderRadius: 20,
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'space-between'
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginHorizontal:10
   },
   BoxMobil: {
     position: "relative",
     borderRadius: 20,
-    flexDirection:'column'
+    flexDirection: "column",
   },
 });
 export default styles;
