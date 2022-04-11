@@ -20,9 +20,9 @@ const UseRecommandation = ({
 
   let Cust = data ? 170 : 316;
   let Cust1 = data ? 284 : 360;
-  let CustWidth = data ?  1620:799
-  let CustMArgLeft = data ? 0 :140 
-  let CustSelf = data ?  'center':'flex-start'
+  let CustWidth = data ?  799:1620
+  let CustMArgLeft = !data ? 0 :140 
+  let CustSelf = !data ?  'center':'flex-start'
 
   return (
     <View
