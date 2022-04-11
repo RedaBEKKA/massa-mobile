@@ -90,7 +90,7 @@ const Coaching = ({ navigation }) => {
                       style={{
                         position: "absolute",
                         bottom: 20,
-                        left: 50,
+                        left: 30,
                         width: 249,
                         height: 42,
                       }}
@@ -147,9 +147,10 @@ const Coaching = ({ navigation }) => {
                       style={{
                         position: "absolute",
                         bottom: 20,
-                        left: 50,
+                        left: 30,
                         width: 249,
                         height: 42,
+                        alignSelf:'center'
                       }}
                       onPress={() => {}}
                     >
@@ -197,7 +198,7 @@ const styles = StyleSheet.create({
   },
   card: {
     borderRadius: 20,
-    width: windowWidth > 800 ? 453 : 343,
+    width: windowWidth > 800 ? 453 : windowWidth*.95,
     height: 490,
     backgroundColor: colors.white,
     marginTop: 15,
@@ -206,11 +207,12 @@ const styles = StyleSheet.create({
     position: "relative",
     zIndex: 1,
     overflow: "hidden",
+    alignSelf:'center'
   },
   semiCircle: {
     position: "absolute",
     height: 527,
-    width: windowWidth > 800 ? 527 : 380,
+    width: windowWidth > 800 ? 527 : windowWidth*1,
     left: windowWidth >= 800 ? -41 : -21,
     top: -393,
     borderRadius: 360,

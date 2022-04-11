@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.beige,
     alignItems: "center",
     alignSelf: "center",
-    width: 343,
+    width: windowWidth*.95,
     alignSelf: "center",
     marginVertical: 10,
   },

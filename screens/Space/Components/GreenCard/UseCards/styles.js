@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   MobCotching: {
     position: "relative",
     height: 78,
-    width: 343,
+    width: windowWidth*.95,
     borderRadius: 20,
     backgroundColor: colors.green1,
     marginVertical: 5,

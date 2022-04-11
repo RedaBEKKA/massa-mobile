@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.beige,
     alignItems: "center",
     alignSelf: "center",
-    width: 343,
+    width: windowWidth*.97,
     alignSelf: "center",
     marginVertical: 10,
   },

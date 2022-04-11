@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   statusMob: {
     position: "relative",
     height: 236,
-    width: 343,
+    width: windowWidth*.95,
     borderRadius: 20,
     backgroundColor: colors.red1,
     alignItems: "center",

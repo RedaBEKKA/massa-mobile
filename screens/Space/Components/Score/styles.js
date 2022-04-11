@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   scoreMob: {
     position: "relative",
     height: 236,
-    width: 343,
+    width: windowWidth*.95,
     borderRadius: 20,
     backgroundColor: colors.blue1,
     alignSelf:'center',
