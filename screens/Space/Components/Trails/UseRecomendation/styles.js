@@ -10,9 +10,8 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: colors.beige,
     height: 360,
-    overflow:'hidden',
-    marginVertical:15,
-    
+    overflow: "hidden",
+    marginVertical: 15,
   },
   trailsMob: {
     position: "relative",
@@ -53,7 +52,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     position: "absolute",
     top: "15%",
-    paddingLeft:10
+    paddingLeft: 10,
   },
   BoxBodyMob: {
     width: "100%",
@@ -62,9 +61,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     position: "absolute",
     top: "15%",
-    paddingLeft:10
-
+    paddingLeft: 10,
   },
-  
 });
 export default styles;

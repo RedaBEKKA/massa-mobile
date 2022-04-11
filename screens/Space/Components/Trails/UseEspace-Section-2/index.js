@@ -17,8 +17,8 @@ const UseTrails = ({
 }) => {
   const { isDesktop, isMobile, isTablet } = DimensionsHook();
 
-  let Cust = !data ? 170 : 316;
-  let Cust1 = !data ? 284 : 625;
+  let Cust = data ? 170 : 316;
+  let Cust1 = data ? 284 : 625;
 
   return (
     <View
