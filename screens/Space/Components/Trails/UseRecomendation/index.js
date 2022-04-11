@@ -20,25 +20,29 @@ const UseRecommandation = ({
 
   let Cust = !data ? 170 : 316;
   let Cust1 = !data ? 284 : 360;
+  let CustWidth = !data ? 799: 1620
+  let CustMArgLeft = !data ? 140 : 0
+  let CustSelf = !data ? 'flex-start': 'center'
 
   return (
     <View
       style={
         isDesktop
-          ? [styles.trails, { height: Cust1 }]
+          ? [styles.trails, { height: Cust1 ,width:CustWidth , alignSelf:CustSelf,marginLeft:CustMArgLeft}]
           : [styles.trailsMob, { height: Cust }]
       }
     >
       <View style={styles.BoxTitle}>
-        {!data ? (
+        {data ? (
           <H6 style={isDesktop ? styles.Title : styles.TitleMob}>{Title}</H6>
         ) : (
           <H6 style={isDesktop ? styles.Title : styles.TitleMob}>{Title2}</H6>
         )}
       </View>
 
+
       <View style={isDesktop ? styles.BoxBody : styles.BoxBodyMob}>
-        {!data ? (
+        {data ? (
           <>
             <H7>{TextBody}</H7>
             <TouchableOpacity style={styles.Button}>

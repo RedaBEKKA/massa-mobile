@@ -29,7 +29,7 @@ const UseTrails = ({
       }
     >
       <View style={styles.BoxTitle}>
-        {!data ? (
+        {data ? (
           <H6 style={isDesktop ? styles.Title : styles.TitleMob}>{Title}</H6>
         ) : (
           <H6 style={isDesktop ? styles.Title : styles.TitleMob}>{Title2}</H6>
@@ -37,7 +37,7 @@ const UseTrails = ({
       </View>
 
       <View style={isDesktop ? styles.BoxBody : styles.BoxBodyMob}>
-        {!data ? (
+        {data ? (
           <>
             <H7>{TextBody}</H7>
             <TouchableOpacity style={styles.Button}>

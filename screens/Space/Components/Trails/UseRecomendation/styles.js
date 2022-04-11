@@ -9,11 +9,9 @@ const styles = StyleSheet.create({
     position: "relative",
     borderRadius: 20,
     backgroundColor: colors.beige,
-    width: 1620,
     height: 360,
     overflow:'hidden',
-    alignSelf:'center',
-    marginTop:15,
+    marginVertical:15,
     
   },
   trailsMob: {
@@ -67,5 +65,6 @@ const styles = StyleSheet.create({
     paddingLeft:10
 
   },
+  
 });
 export default styles;
