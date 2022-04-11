@@ -12,7 +12,9 @@ const styles = StyleSheet.create({
   },
   Body: {
     // backgroundColor:'#ccc',
-    alignSelf:'center'
+    // alignSelf:'center',
+    alignItems:'center',
+    justifyContent:'center'
   },
   desktopContent: {
     flex: 1,
@@ -36,7 +38,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     marginHorizontal:10,
-    marginVertical:10
+    marginVertical:10,
+
   },
   BoxMobil: {
     position: "relative",

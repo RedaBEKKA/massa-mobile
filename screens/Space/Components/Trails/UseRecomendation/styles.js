@@ -9,11 +9,12 @@ const styles = StyleSheet.create({
     position: "relative",
     borderRadius: 20,
     backgroundColor: colors.beige,
-    width: 799,
-    height: 284,
+    width: 1620,
+    height: 360,
     overflow:'hidden',
-    alignSelf:'center'
-
+    alignSelf:'center',
+    marginTop:15,
+    
   },
   trailsMob: {
     position: "relative",
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     position: "absolute",
-    top: "10%",
+    top: "15%",
     paddingLeft:10
   },
   BoxBodyMob: {

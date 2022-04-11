@@ -44,8 +44,7 @@ const Home = ({ navigation }) => {
             navigation={navigation}
             type="Trail"
             endpoint={ENDPOINT_TRAILS}
-            Columns={1}
-            horizontal={true}
+            home={true}
 
           />
         </View>
@@ -62,8 +61,7 @@ const Home = ({ navigation }) => {
             navigation={navigation}
             type="Trail"
             endpoint={ENDPOINT_TRAILS}
-            Columns={1}
-            horizontal={true}
+            home={true}
 
           />
         </View>
@@ -80,9 +78,7 @@ const Home = ({ navigation }) => {
             navigation={navigation}
             type="Atelier"
             endpoint={ENDPOINT_WORKSHOPS}
-            Columns={1}
-            horizontal={true}
-
+            home={true}
 
           />
         </View>

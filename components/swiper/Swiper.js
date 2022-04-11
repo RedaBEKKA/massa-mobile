@@ -4,10 +4,12 @@ import SwiperItem from "./SwiperItem";
 import axios from "axios";
 import LoaderItem from "./LoaderItem";
 import { TOKEN } from "@env";
+import DimensionsHook from "../../hooks/DimensionsHook";
 
-const Swiper = ({ type, endpoint, navigation, Columns, horizontal }) => {
+const Swiper = ({ type, endpoint, navigation, home }) => {
   const [Data, setData] = useState([]);
   const [loader, setLoader] = useState(true);
+  const { isDesktop, isMobile, isTablet } = DimensionsHook();
 
   const getData = async () => {
     setLoader(true);
@@ -28,28 +30,84 @@ const Swiper = ({ type, endpoint, navigation, Columns, horizontal }) => {
 
   // 3 Loader item to show
   if (loader) {
-    return (
+    return isDesktop ? (
+      // Check if the user is in the main screen
+      home ? (
+        <FlatList
+          showsHorizontalScrollIndicator={Platform.OS === "web"}
+          horizontal={true}
+          numColumns={1}
+          style={{ marginTop: 15 }}
+          data={[0, 1, 2]}
+          renderItem={() => <LoaderItem />}
+          keyExtractor={(item) => "_" + item}
+          key={"_"}
+        />
+      ) : (
+        <FlatList
+          showsHorizontalScrollIndicator={Platform.OS === "web"}
+          horizontal={false}
+          numColumns={2}
+          style={{ marginTop: 15 }}
+          data={[0, 1, 2]}
+          renderItem={() => <LoaderItem />}
+          keyExtractor={(item) => "_" + item}
+          key={"_"}
+        />
+      )
+    ) : (
       <FlatList
         showsHorizontalScrollIndicator={Platform.OS === "web"}
-        horizontal={horizontal}
-        numColumns={Columns}
+        horizontal={true}
+        numColumns={1}
         style={{ marginTop: 15 }}
         data={[0, 1, 2]}
-        keyExtractor={(item) => item}
+        keyExtractor={(item) => "#" + item}
+        key={"#"}
         renderItem={() => <LoaderItem />}
       />
     );
   }
 
   // FLATLIST WITH DATA
-  return (
+  // add CONDITION FOR FLAT LIST WITH 2 COL
+  return isDesktop ? (
+    home ? (
+      <FlatList
+        showsHorizontalScrollIndicator={Platform.OS === "web"}
+        horizontal={true}
+        numColumns={1}
+        style={{ height: "100%", width: "100%" }}
+        data={Data}
+        keyExtractor={(item) => "_" + item.ressourceTitle}
+        key={"_"}
+        renderItem={(props) => (
+          <SwiperItem {...props} type={type} navigation={navigation} />
+        )}
+      />
+    ) : (
+      <FlatList
+        showsHorizontalScrollIndicator={Platform.OS === "web"}
+        horizontal={false}
+        numColumns={2}
+        style={{ height: "100%", width: "100%" }}
+        data={Data}
+        keyExtractor={(item) => "_" + item.ressourceTitle}
+        key={"_"}
+        renderItem={(props) => (
+          <SwiperItem {...props} type={type} navigation={navigation} />
+        )}
+      />
+    )
+  ) : (
     <FlatList
       showsHorizontalScrollIndicator={Platform.OS === "web"}
-      horizontal={horizontal}
-      numColumns={Columns}
+      horizontal={true}
+      numColumns={1}
       style={{ height: "100%", width: "100%" }}
       data={Data}
-      keyExtractor={(item) => item.ressourceTitle}
+      keyExtractor={(item) => "#" + item.ressourceTitle}
+      key={"#"}
       renderItem={(props) => (
         <SwiperItem {...props} type={type} navigation={navigation} />
       )}

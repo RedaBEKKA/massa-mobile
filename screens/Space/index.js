@@ -9,8 +9,8 @@ import Status from "./Components/Status";
 import Score from "./Components/Score";
 import GrenCards from "./Components/GreenCard";
 import UseTrails from "./Components/Trails/UseEspace-Section-2";
-import { ENDPOINT_TRAILS,TOKEN } from "@env";
-import axios from "axios";
+import { ENDPOINT_WORKSHOPS, ENDPOINT_TRAILS, TOKEN } from "@env";
+import UseRecommandation from "./Components/Trails/UseRecomendation";
 
 const Espace = ({ navigation }) => {
   const { isDesktop, isMobile, isTablet } = DimensionsHook();
@@ -19,7 +19,7 @@ const Espace = ({ navigation }) => {
   const [loader, setLoader] = useState(false);
 
   const PaddingVertical = !isDesktop ? 15 : 10;
-  const Left = isDesktop ? 110 : 10;
+  const Left = isDesktop ? 145 : 10;
   const custumDisplay = isDesktop ? "row" : "column";
 
   const Box = ({ children }) => {
@@ -27,16 +27,7 @@ const Espace = ({ navigation }) => {
       <View style={isDesktop ? styles.Box : styles.BoxMobil}>{children}</View>
     );
   };
-  const getData = async () => {
-    setLoader(true);
-    const Response = await axios.post(ENDPOINT_TRAILS, { access_token: TOKEN });
-    console.log('Response', Response)
-    setData(Response.data);
-    setLoader(false);
-    setTimeout(() => {
-      setLoader(false);
-    }, 2000);
-  };
+
   return (
     <View style={styles.container}>
       <HeaderComponent navigation={navigation} />
@@ -62,9 +53,10 @@ const Espace = ({ navigation }) => {
               Title2="Trails et ateliers en cours"
               TextBtn="Sélectioner un trail"
               TextBody="Aucun trail en cours"
-              getData={getData}
               data={data}
               swiper={true}
+              type="Trail"
+              endpoint={ENDPOINT_TRAILS}
             />
           </Box>
           <Box>
@@ -73,11 +65,28 @@ const Espace = ({ navigation }) => {
               TextBtn="Consulter notre catalogue"
               TextBody="Vous n'avez pas encore ajouté de favoris"
               Title2="Favoris"
-              swiper={false}
-
-
+              data={data}
+              type="Trail"
+              endpoint={ENDPOINT_WORKSHOPS}
+              swiper={true}
             />
           </Box>
+        </View>
+
+        <View style={[styles.Body, {  }]}>
+          {/* <Box > */}
+            <UseRecommandation
+              Title="Recommantdation"
+              TextBtn="Coaching"
+              TextBody='Pour avoir des recommandations adaptée à votre profil,
+    merci de cliquer sur "Coaching" pour répondre au questionnaire.'
+              Title2="Recommantdation"
+              data={data}
+              type="Recommantdation"
+              endpoint={ENDPOINT_WORKSHOPS}
+              swiper={true}
+            />
+          {/* </Box> */}
         </View>
       </ScrollView>
     </View>

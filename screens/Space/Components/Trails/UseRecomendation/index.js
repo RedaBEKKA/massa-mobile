@@ -1,15 +1,16 @@
-import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
+import { View, Text, Image, Touchable, TouchableOpacity } from "react-native";
 import Swiper from "../../../../../components/swiper/Swiper";
 import { H6, H7 } from "../../../../../components/TextsComponents";
 import DimensionsHook from "../../../../../hooks/DimensionsHook";
 import styles from "./styles";
 
-const UseTrails = ({
+const UseRecommandation = ({
   Title,
   TextBody,
   TextBtn,
   Title2,
+
   navigation,
   endpoint,
   data,
@@ -18,7 +19,7 @@ const UseTrails = ({
   const { isDesktop, isMobile, isTablet } = DimensionsHook();
 
   let Cust = !data ? 170 : 316;
-  let Cust1 = !data ? 284 : 625;
+  let Cust1 = !data ? 284 : 360;
 
   return (
     <View
@@ -48,14 +49,14 @@ const UseTrails = ({
           <Swiper
             navigation={navigation}
             type={type}
-            home={false}
+            home={true}
             endpoint={endpoint}
           />
         ) : (
           <Swiper
             navigation={navigation}
             type={type}
-            home={false}
+            home={true}
             endpoint={endpoint}
           />
         )}
@@ -64,4 +65,4 @@ const UseTrails = ({
   );
 };
 
-export default UseTrails;
+export default UseRecommandation;
