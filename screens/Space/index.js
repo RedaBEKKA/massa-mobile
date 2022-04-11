@@ -1,5 +1,5 @@
 import { View, ScrollView } from "react-native";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HeaderComponent from "../../components/HeaderComponent";
 import { H5 } from "../../components/TextsComponents";
 import DimensionsHook from "../../hooks/DimensionsHook";
@@ -15,7 +15,7 @@ import UseRecommandation from "./Components/Trails/UseRecomendation";
 const Espace = ({ navigation }) => {
   const { isDesktop, isMobile, isTablet } = DimensionsHook();
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(true);
   const [loader, setLoader] = useState(false);
 
   const PaddingVertical = !isDesktop ? 15 : 10;
@@ -27,6 +27,11 @@ const Espace = ({ navigation }) => {
       <View style={isDesktop ? styles.Box : styles.BoxMobil}>{children}</View>
     );
   };
+  useEffect(() => {
+    setTimeout(() => {
+      setData(false);
+    }, 5000);
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -73,19 +78,19 @@ const Espace = ({ navigation }) => {
           </Box>
         </View>
 
-        <View style={[styles.Body, {  }]}>
+        <View style={[styles.Body, {}]}>
           {/* <Box > */}
-            <UseRecommandation
-              Title="Recommantdation"
-              TextBtn="Coaching"
-              TextBody='Pour avoir des recommandations adaptée à votre profil,
+          <UseRecommandation
+            Title="Recommantdation"
+            TextBtn="Coaching"
+            TextBody='Pour avoir des recommandations adaptée à votre profil,
     merci de cliquer sur "Coaching" pour répondre au questionnaire.'
-              Title2="Recommantdation"
-              data={data}
-              type="Recommantdation"
-              endpoint={ENDPOINT_WORKSHOPS}
-              swiper={true}
-            />
+            Title2="Recommantdation"
+            data={data}
+            type="Recommantdation"
+            endpoint={ENDPOINT_WORKSHOPS}
+            swiper={true}
+          />
           {/* </Box> */}
         </View>
       </ScrollView>
