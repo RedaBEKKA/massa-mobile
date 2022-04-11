@@ -7,11 +7,17 @@ import {
   H7,
   SmallBoldTxt,
 } from "../../../../../components/TextsComponents";
+import { colors } from "../../../../../styles/GlobalStyle";
 const UseCard = ({ navigation,img,title }) => {
   const { isDesktop, isMobile, isTablet } = DimensionsHook();
   const ToNav = () => {
     navigation.navigate({title});
   };
+  const [isHovered, setHovered] = React.useState(false);
+
+  const CustBackground = isHovered ? colors.beige : colors.green2
+  const CustColor = !isHovered ? colors.beige : colors.green2
+      
   return (
     <View style={isDesktop ? styles.ChatCard : styles.MobCotching}>
       <View style={isDesktop ? styles.DeskLeftBox : styles.LeftBox}>
@@ -23,10 +29,12 @@ const UseCard = ({ navigation,img,title }) => {
       </View>
 
       <TouchableOpacity
-        style={isDesktop ? styles.DestTxt : styles.txt}
+        style={isDesktop ? [styles.DestTxt,{backgroundColor:CustBackground}] : [styles.txt,{backgroundColor:CustBackground}]}
         onPress={()=>{}}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
       >
-        <SmallBoldTxt>Go !</SmallBoldTxt>
+        <SmallBoldTxt style={{color:CustColor}}>Go !</SmallBoldTxt>
       </TouchableOpacity>
     </View>
   );
