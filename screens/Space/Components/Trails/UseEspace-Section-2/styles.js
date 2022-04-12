@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
   trails: {
     position: "relative",
     borderRadius: 20,
-    backgroundColor: colors.beige,
-    width: 799,
+    backgroundColor: colors.grayLabel,
+    width: windowWidth*.41,
     height: 284,
     overflow:'hidden',
     alignSelf:'center'

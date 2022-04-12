@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
 
   Box: {
     position: "relative",
-    width: 799,
     borderRadius: 20,
     flexDirection: "row",
     alignItems: "center",

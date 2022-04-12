@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.red1,
     alignItems: "center",
     justifyContent: "space-evenly",
+    marginRight:15
   },
   statusMob: {
     position: "relative",
