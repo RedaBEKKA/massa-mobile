@@ -34,7 +34,7 @@ const UseRecommandation = ({
   let CustWidth = data ? windowWidth * 0.41 : windowWidth * 0.415 * 2;
   let CustMArgLeft = !data ? 0 : 150;
   let CustSelf = !data ? "center" : "flex-start";
-
+let Font = isDesktop ? 16 : 12
   return (
     <View
       style={
@@ -76,7 +76,7 @@ const UseRecommandation = ({
       <View style={isDesktop ? styles.BoxBody : styles.BoxBodyMob}>
         {data ? (
           <>
-            <H7 style={{ textAlign: "center" }}>{TextBody}</H7>
+            <H7 style={isDesktop? styles.TextBody : styles.TextMob}>{TextBody}</H7>
             <TouchableOpacity style={styles.Button}>
               <Text>{TextBtn}</Text>
             </TouchableOpacity>

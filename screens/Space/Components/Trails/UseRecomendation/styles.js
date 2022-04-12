@@ -56,8 +56,10 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   TitleMob: {
-    top: 10,
   },
+  TextMob:{
+    fontSize:14
+  },  
 
   BoxBody: {
     width: "100%",

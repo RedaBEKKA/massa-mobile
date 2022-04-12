@@ -37,9 +37,18 @@ const styles = StyleSheet.create({
     justifyContent:'space-between',
     alignItems:'center',
     width:windowWidth*.95,
-    paddingHorizontal:10
+    alignItems:'center',
+ 
    
   }, 
+
+  TextTouTVoir:{
+
+  },
+  TextTouTVoirMob:{
+      marginRight:25,
+      fontSize:14
+  },
   Button: {
     backgroundColor: colors.green2,
     width: 247,
@@ -58,7 +67,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   TitleMob: {
-    top: 10,
+    fontSize:15
   },
 
   BoxBody: {

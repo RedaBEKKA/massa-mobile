@@ -41,7 +41,7 @@ const UseTrails = ({
               }}
             >
               <BoldTxt
-                style={{ paddingRight: isMobile ? 10 : 20, cursor: "pointer" }}
+                style={isDesktop ? styles.TextTouTVoir :styles.TextTouTVoirMob  }
               >
                 Tout Voir
               </BoldTxt>
