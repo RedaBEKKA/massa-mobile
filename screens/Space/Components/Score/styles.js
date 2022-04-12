@@ -8,10 +8,12 @@ const styles = StyleSheet.create({
   score: {
     position: "relative",
     height: 236,
-    width: '50%',
+    width: '49%',
+    // left:'51%',
     borderRadius: 20,
     backgroundColor: colors.blue1,
-    marginRight:15
+    marginRight:15,
+    overflow:'hidden'
 
   },
   scoreMob: {
@@ -26,11 +28,11 @@ const styles = StyleSheet.create({
   Line:{
     backgroundColor:colors.beige,
     height:20,
-    width:309,
+    width:"100%",
     alignItems:'center',
-    justifyContent:'space-between',
+    // justifyContent:'space-between',
     flexDirection:'row',
-    paddingRight:10,
+    // paddingRight:10,
     position:'absolute',
     top:"50%"
   },

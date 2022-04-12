@@ -8,12 +8,13 @@ const styles = StyleSheet.create({
   status: {
     position: "relative",
     height: 236,
-    width: '50%',
+    width: "49%",
     borderRadius: 20,
     backgroundColor: colors.red1,
     alignItems: "center",
     justifyContent: "space-evenly",
-    marginRight:15
+    marginRight:15,
+    
   },
   statusMob: {
     position: "relative",
@@ -29,6 +30,7 @@ const styles = StyleSheet.create({
   },
   statusItem: {
     flexDirection: "row",
+    
   },
   item: {
     marginHorizontal: 10,

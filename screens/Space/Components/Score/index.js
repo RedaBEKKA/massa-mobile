@@ -67,9 +67,9 @@ const Score = () => {
           </SmallBoldTxt>
         </View>
       </View>
-      <View style={styles.LineSmall}></View>
+      {/* <View style={styles.LineSmall}></View>
       <View style={[styles.LineSmall, { right: 11 }]}></View>
-      <View style={[styles.LineSmall, { right: 3 }]}></View>
+      <View style={[styles.LineSmall, { right: 3 }]}></View> */}
     </View>
   );
 };
