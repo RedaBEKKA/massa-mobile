@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   ChatCard: {
     position: "relative",
     height: 108,
-    width: 287,
+    width: '100%',
     borderRadius: 20,
     backgroundColor: colors.green1,
     marginVertical: 5,
