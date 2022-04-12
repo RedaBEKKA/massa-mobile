@@ -1,5 +1,5 @@
-import { StyleSheet, View, Image, Pressable } from "react-native";
-import React from "react";
+import { StyleSheet, View, Image, Pressable,Dimensions } from "react-native";
+import React, { useEffect } from "react";
 import { BoldTxt, H6, Txt } from "../TextsComponents";
 import { colors } from "../../styles/GlobalStyle";
 import DimensionsHook from "../../hooks/DimensionsHook";
@@ -8,13 +8,21 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useDisclose } from "native-base";
 
 import RolloverSmall from "../rollover/RolloverSmall";
+
+const windowWidth = Dimensions.get("window").width;
+  const windowHeight = Dimensions.get("window").height;
+
+  const Cust = windowWidth > 800 ? windowWidth/5.5 : 280 
 const SwiperItem = ({ item, type, navigation }) => {
+  React.useEffect(()=>{
+    console.log(windowWidth,' width')
+  },[])
   const { isDesktop, isMobile } = DimensionsHook();
   const { isOpen, onOpen, onClose } = useDisclose();
   return (
     <Pressable
       onPress={() => (isMobile ? onOpen() : null)}
-      style={[styles.container, { width: isDesktop ? 280 : 270 }]}
+      style={[styles.container, { width: Cust }]}
     >
       <Image source={{ uri: item.poster_link }} style={styles.image} />
       <LinearGradient
