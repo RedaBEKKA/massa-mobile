@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   coaching: {
     position: "relative",
     height: 234,
-    width: 183,
+    width: '20%',
     borderRadius: 20,
     backgroundColor: colors.yellow,
     marginVertical: 5,

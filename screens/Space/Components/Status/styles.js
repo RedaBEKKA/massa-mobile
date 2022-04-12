@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   status: {
     position: "relative",
     height: 236,
-    width: 388,
+    width: '50%',
     borderRadius: 20,
     backgroundColor: colors.red1,
     alignItems: "center",

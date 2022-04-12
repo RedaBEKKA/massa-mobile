@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginHorizontal:10,
     marginVertical:10,
+    backgroundColor:"#ccc"
   },
   BoxMobil: {
     position: "relative",

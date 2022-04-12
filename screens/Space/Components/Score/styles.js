@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   score: {
     position: "relative",
     height: 236,
-    width: 388,
+    width: '50%',
     borderRadius: 20,
     backgroundColor: colors.blue1,
     marginRight:15

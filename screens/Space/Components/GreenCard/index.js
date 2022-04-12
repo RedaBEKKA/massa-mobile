@@ -15,11 +15,11 @@ const GrenCards = () => {
   return (
     <>
     
-      <View style={{ flexDirection: "column", }}>
+      <View style={{ flexDirection: "column",width:'35%' }}>
       <UseCard title="Parler" img={chats} />
       <UseCard title="Jouer" img={play} />
       </View>
-      <View style={isDesktop && styles.secondCard}>
+      <View style={isDesktop && [styles.secondCard,{width:'35%'}]}>
       <UseCard title="Se relaxer" img={relaxer} />
       <UseCard title="Dormir" img={Dormir} />
 
