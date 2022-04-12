@@ -12,7 +12,7 @@ import RolloverSmall from "../rollover/RolloverSmall";
 const windowWidth = Dimensions.get("window").width;
   const windowHeight = Dimensions.get("window").height;
 
-  const Cust = windowWidth > 800 ? windowWidth/5.5 : 280 
+  const Cust = windowWidth > 800 ? windowWidth/5.4 : 280 
 const SwiperItem = ({ item, type, navigation }) => {
   React.useEffect(()=>{
     console.log(windowWidth,' width')
