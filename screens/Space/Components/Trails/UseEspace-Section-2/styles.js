@@ -25,7 +25,21 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginVertical: 10,
   },
-
+  Row:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    alignItems:'center',
+    width:windowWidth*.41,
+   
+  },  
+  RowMob:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    alignItems:'center',
+    width:windowWidth*.95,
+    paddingHorizontal:10
+   
+  }, 
   Button: {
     backgroundColor: colors.green2,
     width: 247,

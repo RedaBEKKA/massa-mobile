@@ -14,9 +14,7 @@ const windowWidth = Dimensions.get("window").width;
 
   const Cust = windowWidth > 800 ? windowWidth/5.4 : 280 
 const SwiperItem = ({ item, type, navigation }) => {
-  React.useEffect(()=>{
-    console.log(windowWidth,' width')
-  },[])
+
   const { isDesktop, isMobile } = DimensionsHook();
   const { isOpen, onOpen, onClose } = useDisclose();
   return (

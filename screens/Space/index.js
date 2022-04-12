@@ -62,6 +62,8 @@ const Espace = ({ navigation }) => {
               swiper={true}
               type="Trail"
               endpoint={ENDPOINT_TRAILS}
+              toNav='Trails'
+              navigation={navigation} 
             />
           </Box>
           <Box>
@@ -74,6 +76,9 @@ const Espace = ({ navigation }) => {
               type="Trail"
               endpoint={ENDPOINT_WORKSHOPS}
               swiper={true}
+              toNav='Trails'
+              navigation={navigation} 
+
             />
           </Box>
         </View>
@@ -90,6 +95,8 @@ const Espace = ({ navigation }) => {
             type="Recommantdation"
             endpoint={ENDPOINT_WORKSHOPS}
             swiper={true}
+            toNav='Trails'
+              navigation={navigation} 
           />
           {/* </Box> */}
         </View>

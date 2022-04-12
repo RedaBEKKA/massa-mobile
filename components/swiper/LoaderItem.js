@@ -9,13 +9,11 @@ const LoaderItem = () => {
   const windowWidth = Dimensions.get("window").width;
   const windowHeight = Dimensions.get("window").height;
 
-  const Cust = windowWidth > 800 ? 370 : 280 
-  useEffect(() => {
-    console.log('windowWidth', windowWidth)
-  }, [])
+  const Cust = windowWidth > 800 ? windowWidth/5.4 : 280 
+
   
   return (
-    <View style={[styles.container, { width: isDesktop ? 280 : 270 }]}>
+    <View style={[styles.container, { width: Cust }]}>
       <Spinner size="large" />
     </View>
   );

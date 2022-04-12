@@ -8,13 +8,16 @@ import DimensionsHook from "../../hooks/DimensionsHook";
 
 const Swiper = ({ type, endpoint, navigation, home }) => {
   const [Data, setData] = useState([]);
+  const [Data2, setData2] = useState([]);
   const [loader, setLoader] = useState(true);
   const { isDesktop, isMobile, isTablet } = DimensionsHook();
 
   const getData = async () => {
     setLoader(true);
     const Response = await axios.post(endpoint, { access_token: TOKEN });
+    let Response2 = Response.data.slice(0,3)
     setData(Response.data);
+    setData2(Response2)
     setTimeout(() => {
       setLoader(false);
     }, 2000);
@@ -91,7 +94,7 @@ const Swiper = ({ type, endpoint, navigation, home }) => {
         horizontal={false}
         numColumns={2}
         style={{ height: "100%", width: "100%" }}
-        data={Data}
+        data={Data2}
         keyExtractor={(item) => "_" + item.ressourceTitle}
         key={"_"}
         renderItem={(props) => (

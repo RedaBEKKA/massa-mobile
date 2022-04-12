@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import Swiper from "../../../../../components/swiper/Swiper";
-import { H6, H7 } from "../../../../../components/TextsComponents";
+import { BoldTxt, H6, H7 } from "../../../../../components/TextsComponents";
 import DimensionsHook from "../../../../../hooks/DimensionsHook";
 import styles from "./styles";
 
@@ -14,6 +14,7 @@ const UseTrails = ({
   endpoint,
   data,
   type,
+  toNav,
 }) => {
   const { isDesktop, isMobile, isTablet } = DimensionsHook();
 
@@ -32,7 +33,20 @@ const UseTrails = ({
         {data ? (
           <H6 style={isDesktop ? styles.Title : styles.TitleMob}>{Title}</H6>
         ) : (
-          <H6 style={isDesktop ? styles.Title : styles.TitleMob}>{Title2}</H6>
+          <View style={isDesktop ? styles.Row : styles.RowMob}>
+            <H6 style={isDesktop ? styles.Title : styles.TitleMob}>{Title2}</H6>
+            <TouchableOpacity
+              onPress={() => {
+                console.log("cilc"), navigation.navigate(toNav);
+              }}
+            >
+              <BoldTxt
+                style={{ paddingRight: isMobile ? 10 : 20, cursor: "pointer" }}
+              >
+                Tout Voir
+              </BoldTxt>
+            </TouchableOpacity>
+          </View>
         )}
       </View>
 

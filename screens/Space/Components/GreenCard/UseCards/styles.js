@@ -45,7 +45,6 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     alignItems: "center",
     overflow:'hidden' ,
-    alignSelf:'center'
   },
   LeftBox: {
     flexDirection: "row",
