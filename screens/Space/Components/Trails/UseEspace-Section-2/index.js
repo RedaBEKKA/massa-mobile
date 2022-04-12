@@ -39,6 +39,7 @@ const UseTrails = ({
               onPress={() => {
                 console.log("cilc"), navigation.navigate(toNav);
               }}
+              style= {styles.TextTouTVoir}
             >
               <BoldTxt
                 style={isDesktop ? styles.TextTouTVoir :styles.TextTouTVoirMob  }

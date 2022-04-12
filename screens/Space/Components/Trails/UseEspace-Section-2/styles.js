@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   }, 
 
   TextTouTVoir:{
-
+    marginRight:25,
   },
   TextTouTVoirMob:{
       marginRight:25,
