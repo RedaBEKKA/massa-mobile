@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, Dimensions } from "react-native";
 import React from "react";
 import styles from "./styles";
 import ChatCard from "./UseCards";
@@ -11,21 +11,26 @@ import Dormir from "../../../../assets/Espace/Vector1.png";
 
 const GrenCards = () => {
   const { isDesktop, isMobile, isTablet } = DimensionsHook();
-
+  const windowWidth = Dimensions.get("window").width;
+  const windowHeight = Dimensions.get("window").height;
   return (
     <>
-    
-      <View style={{ flexDirection: "column",width:'40%' }}>
-      <UseCard title="Parler" img={chats} />
-      <UseCard title="Jouer" img={play} />
-      </View>
-      <View style={isDesktop && [styles.secondCard,{width:'35%'}]}>
-      <UseCard title="Se relaxer" img={relaxer} />
-      <UseCard title="Dormir" img={Dormir} />
 
-      </View>
-    </>
-  );
+      <View style={{ flexDirection: "column", width: '40%' }}>
+
+        <View style={{ flexDirection: "column", width: windowWidth * .15 }}>
+
+          <UseCard title="Parler" img={chats} />
+          <UseCard title="Jouer" img={play} />
+        </View>
+        <View style={isDesktop && [styles.secondCard, { width: windowWidth * .15 }]}>
+          <UseCard title="Se relaxer" img={relaxer} />
+          <UseCard title="Dormir" img={Dormir} />
+
+        </View>
+        </View>
+      </>
+      );
 };
 
-export default GrenCards;
+      export default GrenCards;
