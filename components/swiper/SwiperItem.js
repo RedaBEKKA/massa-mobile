@@ -14,7 +14,7 @@ const SwiperItem = ({ item, type, navigation }) => {
   return (
     <Pressable
       onPress={() => (isMobile ? onOpen() : null)}
-      style={[styles.container, { width: isDesktop ? 370 : 270 }]}
+      style={[styles.container, { width: isDesktop ? 280 : 270 }]}
     >
       <Image source={{ uri: item.poster_link }} style={styles.image} />
       <LinearGradient

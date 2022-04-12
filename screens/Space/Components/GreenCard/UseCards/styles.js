@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   ChatCard: {
     position: "relative",
     height: 108,
-    width: 287,
+    width: "100%",
     borderRadius: 20,
     backgroundColor: colors.green1,
     marginVertical: 5,
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.green2,
     alignItems: "center",
     justifyContent: "center",
-    marginRight: 5,
+    // marginRight: 5,
   },
   DestTxt: {
     width: 60,
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     marginRight: 5,
     position: "absolute",
     bottom: 20,
-    right:5
+    right:2
   },
 });
 export default styles;

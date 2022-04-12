@@ -9,12 +9,10 @@ const styles = StyleSheet.create({
     position: "relative",
     height: 236,
     width: '49%',
-    // left:'51%',
     borderRadius: 20,
     backgroundColor: colors.blue1,
     marginRight:15,
     overflow:'hidden'
-
   },
   scoreMob: {
     position: "relative",

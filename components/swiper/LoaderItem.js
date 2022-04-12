@@ -7,7 +7,7 @@ import DimensionsHook from "../../hooks/DimensionsHook";
 const LoaderItem = () => {
   const { isDesktop } = DimensionsHook();
   return (
-    <View style={[styles.container, { width: isDesktop ? 370 : 270 }]}>
+    <View style={[styles.container, { width: isDesktop ? 280 : 270 }]}>
       <Spinner size="large" />
     </View>
   );

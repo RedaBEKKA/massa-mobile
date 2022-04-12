@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, Image, Touchable, TouchableOpacity } from "react-native";
+import { View, Text, Image, Touchable, TouchableOpacity,Dimensions } from "react-native";
 import Swiper from "../../../../../components/swiper/Swiper";
 import { H6, H7 } from "../../../../../components/TextsComponents";
 import DimensionsHook from "../../../../../hooks/DimensionsHook";
 import styles from "./styles";
+
+const windowWidth = Dimensions.get("window").width;
+const windowHeight = Dimensions.get("window").height;
 
 const UseRecommandation = ({
   Title,
@@ -20,7 +23,7 @@ const UseRecommandation = ({
 
   let Cust = data ? 170 : 316;
   let Cust1 = data ? 284 : 360;
-  let CustWidth = data ?  799:1620
+  let CustWidth = !data ?  windowWidth*.41:1620
   let CustMArgLeft = !data ? 0 :140 
   let CustSelf = !data ?  'center':'flex-start'
 

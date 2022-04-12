@@ -25,7 +25,7 @@ const UseCard = ({ navigation,img,title }) => {
           <Image source={img} style={styles.image} />
         </View>
 
-        <View>{isDesktop ? <H7 style={{marginLeft:15}}>{title}</H7> : <H6>{title}</H6>}</View>
+        <View>{isDesktop ? <H7 style={{marginLeft:10}}>{title}</H7> : <H6>{title}</H6>}</View>
       </View>
 
       <TouchableOpacity
