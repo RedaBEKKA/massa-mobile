@@ -14,7 +14,6 @@ const styles = StyleSheet.create({
       },
       secondCard: {
         flexDirection: "column",
-        marginHorizontal: 5,
       },
 });
 export default styles;

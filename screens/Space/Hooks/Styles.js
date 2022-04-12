@@ -32,13 +32,13 @@ const styles = StyleSheet.create({
 
   Box: {
     position: "relative",
+    width: windowWidth*.41,
     borderRadius: 20,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     marginHorizontal:10,
     marginVertical:10,
-
   },
   BoxMobil: {
     position: "relative",

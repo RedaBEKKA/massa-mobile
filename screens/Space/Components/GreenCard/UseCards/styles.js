@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: colors.green1,
     marginVertical: 5,
-    overflow:'hidden' 
+    overflow:'hidden' ,
   },
   BoxImage: {
     backgroundColor: "#FBF6F360",
