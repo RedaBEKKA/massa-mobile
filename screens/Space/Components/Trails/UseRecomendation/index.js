@@ -32,7 +32,7 @@ const UseRecommandation = ({
   let Cust = data ? 170 : 316;
   let Cust1 = data ? 284 : 360;
   let CustWidth = data ? windowWidth * 0.41 : windowWidth * 0.415 * 2;
-  let CustMArgLeft = !data ? 0 : 150;
+  let CustMArgLeft = !data ? 0 : '8%';
   let CustSelf = !data ? "center" : "flex-start";
 let Font = isDesktop ? 16 : 12
   return (

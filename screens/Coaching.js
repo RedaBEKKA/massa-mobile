@@ -30,7 +30,7 @@ const Coaching = ({ navigation }) => {
       <View style={{ flex: 1 }}>
         <BackHeader navigation={navigation} />
         <ScrollView>
-          <View style={{ position: "relative" }}>
+          <View style={{ }}>
             <View style={styles.content}>
               <View style={styles.Title}>
                 <H5 style={styles.textJustify}>Coaching</H5>
@@ -232,10 +232,11 @@ const styles = StyleSheet.create({
   },
 
   mascotteImg: {
-    position: "absolute",
-    height: 344,
-    width: 262,
-    right: 22,
-    bottom: -230,
-  },
+    position: 'absolute',
+    height: 240,
+    width: 184,
+    resizeMode: 'contain',
+    left: "82%",
+    bottom: "-2.5%"
+  }
 });
